@@ -1,0 +1,11 @@
+{{#paper-card}}
+  {{#link-to 'book' book.id}}<img src="{{book.image_url}}" alt="{{book.title}}" />{{/link-to}}
+  {{#paper-card-content}}
+    {{#link-to 'book' book.id}}<h2>{{book.title}}</h2>{{/link-to}}
+    <h3>{{book.last_name}}, {{book.first_name}}</h3>
+    <p>
+      {{book.summary}}
+    </p>
+    {{paper-divider}}
+    {{/paper-card-content}}
+{{/paper-card}}

@@ -1,0 +1,15 @@
+{{#if reviewFormShow}}
+  {{#paper-card}}
+    {{#paper-card-content}}
+      <h3>Write a New Review</h3>
+      {{paper-icon "star-border"}}{{paper-icon "star-border"}}{{paper-icon "star-border"}}{{paper-icon "star-border"}}{{paper-icon "star-border"}}
+      {{paper-input label="Enter Star Rating Number" value=rating type="number" min="1" max="5"}}
+      {{paper-input label="Name" value=name}}
+      {{paper-input textarea=true label="Write More" value=explanation}}
+
+      {{#paper-button raised=true primary=true action="saveReview"}}Add New Review{{/paper-button}}
+    {{/paper-card-content}}
+  {{/paper-card}}
+  {{else}}
+  {{#paper-button raised=true primary=true action="reviewFormShow"}}Add a Review{{/paper-button}}
+{{/if}}

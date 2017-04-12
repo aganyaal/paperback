@@ -1,0 +1,31 @@
+{{#paper-card}}
+  <img src="{{book.image_url}}" alt="{{book.title}}" />
+  {{#paper-card-content}}
+    <h1>{{book.title}}</h1>
+    <h2>{{author}}</h2>
+    <p>
+      {{book.summary}}
+    </p>
+    {{paper-divider}}
+    <button class="add-book" {{action 'add' book}}>Add to Your Reading List</button>
+  {{/paper-card-content}}
+{{/paper-card}}
+
+{{#paper-card}}
+  {{#paper-card-content}}
+    {{new-review book=book saveReview="saveReview"}}
+    <h2>Reviews</h2>
+  {{/paper-card-content}}
+  {{#paper-card-content}}
+    {{#each sortedReviews as |review|}}
+      {{#paper-card class="sub-card"}}
+        {{#paper-card-content}}
+          {{review-rating review.rating}}
+          {{paper-divider}}
+          <h3>{{review.name}}</h3>
+          <p>{{review.explanation}}</p>
+        {{/paper-card-content}}
+      {{/paper-card}}
+    {{/each}}
+  {{/paper-card-content}}
+{{/paper-card}}

@@ -1,0 +1,12 @@
+{{#paper-card}}
+  {{#paper-card-content}}
+  <h2>Add New Book</h2>
+  {{paper-divider}}
+    {{paper-input label="Title" value=title}}
+    {{paper-input label="Last Name" value=last_name}}
+    {{paper-input label="First Name" value=first_name}}
+    {{paper-input textarea=true label="Summary" value=summary}}
+    {{paper-input label="Image URL" value=image_url}}
+      {{#paper-button raised=true primary=true action="addBook"}}Add New Book{{/paper-button}}
+  {{/paper-card-content}}
+{{/paper-card}}

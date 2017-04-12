@@ -1,0 +1,6 @@
+<header>
+  <h1>Our books.</h1>
+</header>
+{{#each model as |book|}}
+  {{book-tile book=book transitionTo="transitionTo"}}
+{{/each}}
